@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4394B3CFD4DECE2FD22A6D68 /* libPods-TPOneClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE8C372ADD2B6B79CC9624B /* libPods-TPOneClient.a */; };
 		C1266FEC1BEC94DC003ED461 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1266FEB1BEC94DC003ED461 /* main.m */; };
 		C1266FEF1BEC94DC003ED461 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1266FEE1BEC94DC003ED461 /* AppDelegate.m */; };
 		C1266FF21BEC94DC003ED461 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1266FF11BEC94DC003ED461 /* ViewController.m */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6BE8C372ADD2B6B79CC9624B /* libPods-TPOneClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TPOneClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1266FE71BEC94DC003ED461 /* TPOneClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPOneClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1266FEB1BEC94DC003ED461 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C1266FED1BEC94DC003ED461 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		C126700B1BEC94DC003ED461 /* TPOneClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TPOneClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C126700F1BEC94DC003ED461 /* TPOneClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOneClientUITests.m; sourceTree = "<group>"; };
 		C12670111BEC94DC003ED461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C71B262E7853CEB11DA4ABA6 /* Pods-TPOneClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPOneClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-TPOneClient/Pods-TPOneClient.release.xcconfig"; sourceTree = "<group>"; };
+		F86D1F8E58CCABD08DEDD83A /* Pods-TPOneClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPOneClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TPOneClient/Pods-TPOneClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4394B3CFD4DECE2FD22A6D68 /* libPods-TPOneClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		400DD84F7F5E84609281BFBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BE8C372ADD2B6B79CC9624B /* libPods-TPOneClient.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C1266FDE1BEC94DC003ED461 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +98,8 @@
 				C12670031BEC94DC003ED461 /* TPOneClientTests */,
 				C126700E1BEC94DC003ED461 /* TPOneClientUITests */,
 				C1266FE81BEC94DC003ED461 /* Products */,
+				CB3FED60F6AB5703AF8775AB /* Pods */,
+				400DD84F7F5E84609281BFBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +155,15 @@
 			path = TPOneClientUITests;
 			sourceTree = "<group>";
 		};
+		CB3FED60F6AB5703AF8775AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F86D1F8E58CCABD08DEDD83A /* Pods-TPOneClient.debug.xcconfig */,
+				C71B262E7853CEB11DA4ABA6 /* Pods-TPOneClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C12670141BEC94DC003ED461 /* Build configuration list for PBXNativeTarget "TPOneClient" */;
 			buildPhases = (
+				0E3E0450325357749A9F8562 /* Check Pods Manifest.lock */,
 				C1266FE31BEC94DC003ED461 /* Sources */,
 				C1266FE41BEC94DC003ED461 /* Frameworks */,
 				C1266FE51BEC94DC003ED461 /* Resources */,
+				2BACE516165C8739435D8E70 /* Embed Pods Frameworks */,
+				0213EFC66E3BBB1F0054297A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +291,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0213EFC66E3BBB1F0054297A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TPOneClient/Pods-TPOneClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E3E0450325357749A9F8562 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2BACE516165C8739435D8E70 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TPOneClient/Pods-TPOneClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C1266FE31BEC94DC003ED461 /* Sources */ = {
@@ -411,6 +486,7 @@
 		};
 		C12670151BEC94DC003ED461 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F86D1F8E58CCABD08DEDD83A /* Pods-TPOneClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TPOneClient/Info.plist;
@@ -422,6 +498,7 @@
 		};
 		C12670161BEC94DC003ED461 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C71B262E7853CEB11DA4ABA6 /* Pods-TPOneClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TPOneClient/Info.plist;
@@ -498,6 +575,7 @@
 				C12670161BEC94DC003ED461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C12670171BEC94DC003ED461 /* Build configuration list for PBXNativeTarget "TPOneClientTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +584,7 @@
 				C12670191BEC94DC003ED461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C126701A1BEC94DC003ED461 /* Build configuration list for PBXNativeTarget "TPOneClientUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +593,7 @@
 				C126701C1BEC94DC003ED461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
