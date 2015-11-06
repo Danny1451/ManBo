@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C1266FEC1BEC94DC003ED461 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1266FEB1BEC94DC003ED461 /* main.m */; };
+		C1266FEF1BEC94DC003ED461 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1266FEE1BEC94DC003ED461 /* AppDelegate.m */; };
+		C1266FF21BEC94DC003ED461 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1266FF11BEC94DC003ED461 /* ViewController.m */; };
+		C1266FF51BEC94DC003ED461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1266FF31BEC94DC003ED461 /* Main.storyboard */; };
+		C1266FF71BEC94DC003ED461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1266FF61BEC94DC003ED461 /* Assets.xcassets */; };
+		C1266FFA1BEC94DC003ED461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1266FF81BEC94DC003ED461 /* LaunchScreen.storyboard */; };
+		C12670051BEC94DC003ED461 /* TPOneClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C12670041BEC94DC003ED461 /* TPOneClientTests.m */; };
+		C12670101BEC94DC003ED461 /* TPOneClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C126700F1BEC94DC003ED461 /* TPOneClientUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C12670011BEC94DC003ED461 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1266FDF1BEC94DC003ED461 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1266FE61BEC94DC003ED461;
+			remoteInfo = TPOneClient;
+		};
+		C126700C1BEC94DC003ED461 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1266FDF1BEC94DC003ED461 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1266FE61BEC94DC003ED461;
+			remoteInfo = TPOneClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C1266FE71BEC94DC003ED461 /* TPOneClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPOneClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1266FEB1BEC94DC003ED461 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C1266FED1BEC94DC003ED461 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C1266FEE1BEC94DC003ED461 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C1266FF01BEC94DC003ED461 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C1266FF11BEC94DC003ED461 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C1266FF41BEC94DC003ED461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C1266FF61BEC94DC003ED461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1266FF91BEC94DC003ED461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C1266FFB1BEC94DC003ED461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C12670001BEC94DC003ED461 /* TPOneClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TPOneClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C12670041BEC94DC003ED461 /* TPOneClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOneClientTests.m; sourceTree = "<group>"; };
+		C12670061BEC94DC003ED461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C126700B1BEC94DC003ED461 /* TPOneClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TPOneClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C126700F1BEC94DC003ED461 /* TPOneClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOneClientUITests.m; sourceTree = "<group>"; };
+		C12670111BEC94DC003ED461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1266FE41BEC94DC003ED461 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1266FFD1BEC94DC003ED461 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C12670081BEC94DC003ED461 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C1266FDE1BEC94DC003ED461 = {
+			isa = PBXGroup;
+			children = (
+				C1266FE91BEC94DC003ED461 /* TPOneClient */,
+				C12670031BEC94DC003ED461 /* TPOneClientTests */,
+				C126700E1BEC94DC003ED461 /* TPOneClientUITests */,
+				C1266FE81BEC94DC003ED461 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C1266FE81BEC94DC003ED461 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1266FE71BEC94DC003ED461 /* TPOneClient.app */,
+				C12670001BEC94DC003ED461 /* TPOneClientTests.xctest */,
+				C126700B1BEC94DC003ED461 /* TPOneClientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1266FE91BEC94DC003ED461 /* TPOneClient */ = {
+			isa = PBXGroup;
+			children = (
+				C1266FED1BEC94DC003ED461 /* AppDelegate.h */,
+				C1266FEE1BEC94DC003ED461 /* AppDelegate.m */,
+				C1266FF01BEC94DC003ED461 /* ViewController.h */,
+				C1266FF11BEC94DC003ED461 /* ViewController.m */,
+				C1266FF31BEC94DC003ED461 /* Main.storyboard */,
+				C1266FF61BEC94DC003ED461 /* Assets.xcassets */,
+				C1266FF81BEC94DC003ED461 /* LaunchScreen.storyboard */,
+				C1266FFB1BEC94DC003ED461 /* Info.plist */,
+				C1266FEA1BEC94DC003ED461 /* Supporting Files */,
+			);
+			path = TPOneClient;
+			sourceTree = "<group>";
+		};
+		C1266FEA1BEC94DC003ED461 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1266FEB1BEC94DC003ED461 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C12670031BEC94DC003ED461 /* TPOneClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				C12670041BEC94DC003ED461 /* TPOneClientTests.m */,
+				C12670061BEC94DC003ED461 /* Info.plist */,
+			);
+			path = TPOneClientTests;
+			sourceTree = "<group>";
+		};
+		C126700E1BEC94DC003ED461 /* TPOneClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C126700F1BEC94DC003ED461 /* TPOneClientUITests.m */,
+				C12670111BEC94DC003ED461 /* Info.plist */,
+			);
+			path = TPOneClientUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1266FE61BEC94DC003ED461 /* TPOneClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C12670141BEC94DC003ED461 /* Build configuration list for PBXNativeTarget "TPOneClient" */;
+			buildPhases = (
+				C1266FE31BEC94DC003ED461 /* Sources */,
+				C1266FE41BEC94DC003ED461 /* Frameworks */,
+				C1266FE51BEC94DC003ED461 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TPOneClient;
+			productName = TPOneClient;
+			productReference = C1266FE71BEC94DC003ED461 /* TPOneClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1266FFF1BEC94DC003ED461 /* TPOneClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C12670171BEC94DC003ED461 /* Build configuration list for PBXNativeTarget "TPOneClientTests" */;
+			buildPhases = (
+				C1266FFC1BEC94DC003ED461 /* Sources */,
+				C1266FFD1BEC94DC003ED461 /* Frameworks */,
+				C1266FFE1BEC94DC003ED461 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C12670021BEC94DC003ED461 /* PBXTargetDependency */,
+			);
+			name = TPOneClientTests;
+			productName = TPOneClientTests;
+			productReference = C12670001BEC94DC003ED461 /* TPOneClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C126700A1BEC94DC003ED461 /* TPOneClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C126701A1BEC94DC003ED461 /* Build configuration list for PBXNativeTarget "TPOneClientUITests" */;
+			buildPhases = (
+				C12670071BEC94DC003ED461 /* Sources */,
+				C12670081BEC94DC003ED461 /* Frameworks */,
+				C12670091BEC94DC003ED461 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C126700D1BEC94DC003ED461 /* PBXTargetDependency */,
+			);
+			name = TPOneClientUITests;
+			productName = TPOneClientUITests;
+			productReference = C126700B1BEC94DC003ED461 /* TPOneClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1266FDF1BEC94DC003ED461 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "刘旦";
+				TargetAttributes = {
+					C1266FE61BEC94DC003ED461 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					C1266FFF1BEC94DC003ED461 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = C1266FE61BEC94DC003ED461;
+					};
+					C126700A1BEC94DC003ED461 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = C1266FE61BEC94DC003ED461;
+					};
+				};
+			};
+			buildConfigurationList = C1266FE21BEC94DC003ED461 /* Build configuration list for PBXProject "TPOneClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1266FDE1BEC94DC003ED461;
+			productRefGroup = C1266FE81BEC94DC003ED461 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1266FE61BEC94DC003ED461 /* TPOneClient */,
+				C1266FFF1BEC94DC003ED461 /* TPOneClientTests */,
+				C126700A1BEC94DC003ED461 /* TPOneClientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1266FE51BEC94DC003ED461 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1266FFA1BEC94DC003ED461 /* LaunchScreen.storyboard in Resources */,
+				C1266FF71BEC94DC003ED461 /* Assets.xcassets in Resources */,
+				C1266FF51BEC94DC003ED461 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1266FFE1BEC94DC003ED461 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C12670091BEC94DC003ED461 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1266FE31BEC94DC003ED461 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1266FF21BEC94DC003ED461 /* ViewController.m in Sources */,
+				C1266FEF1BEC94DC003ED461 /* AppDelegate.m in Sources */,
+				C1266FEC1BEC94DC003ED461 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1266FFC1BEC94DC003ED461 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C12670051BEC94DC003ED461 /* TPOneClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C12670071BEC94DC003ED461 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C12670101BEC94DC003ED461 /* TPOneClientUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C12670021BEC94DC003ED461 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1266FE61BEC94DC003ED461 /* TPOneClient */;
+			targetProxy = C12670011BEC94DC003ED461 /* PBXContainerItemProxy */;
+		};
+		C126700D1BEC94DC003ED461 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1266FE61BEC94DC003ED461 /* TPOneClient */;
+			targetProxy = C126700C1BEC94DC003ED461 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C1266FF31BEC94DC003ED461 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1266FF41BEC94DC003ED461 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C1266FF81BEC94DC003ED461 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1266FF91BEC94DC003ED461 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C12670121BEC94DC003ED461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C12670131BEC94DC003ED461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C12670151BEC94DC003ED461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TPOneClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = danny.TPOneClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C12670161BEC94DC003ED461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TPOneClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = danny.TPOneClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C12670181BEC94DC003ED461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TPOneClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = danny.TPOneClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TPOneClient.app/TPOneClient";
+			};
+			name = Debug;
+		};
+		C12670191BEC94DC003ED461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TPOneClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = danny.TPOneClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TPOneClient.app/TPOneClient";
+			};
+			name = Release;
+		};
+		C126701B1BEC94DC003ED461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TPOneClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = danny.TPOneClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TPOneClient;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C126701C1BEC94DC003ED461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TPOneClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = danny.TPOneClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TPOneClient;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1266FE21BEC94DC003ED461 /* Build configuration list for PBXProject "TPOneClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C12670121BEC94DC003ED461 /* Debug */,
+				C12670131BEC94DC003ED461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C12670141BEC94DC003ED461 /* Build configuration list for PBXNativeTarget "TPOneClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C12670151BEC94DC003ED461 /* Debug */,
+				C12670161BEC94DC003ED461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C12670171BEC94DC003ED461 /* Build configuration list for PBXNativeTarget "TPOneClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C12670181BEC94DC003ED461 /* Debug */,
+				C12670191BEC94DC003ED461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C126701A1BEC94DC003ED461 /* Build configuration list for PBXNativeTarget "TPOneClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C126701B1BEC94DC003ED461 /* Debug */,
+				C126701C1BEC94DC003ED461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1266FDF1BEC94DC003ED461 /* Project object */;
+}
