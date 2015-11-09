@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HomeViewController.h"
 
 @interface ViewController ()
 
@@ -14,18 +15,40 @@
 
 @implementation ViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     UITableViewController* tab1 = [[UITableViewController alloc] init];
-    UIViewController* view2 = [[UIViewController alloc] init];
+    HomeViewController* view2 = [[HomeViewController alloc] init];
     UITableViewController* tab2 = [[UITableViewController alloc] init];
     [tab1.tabBarItem setTitle:@"tab1"];
     NSArray *viewArray = [[NSArray alloc] initWithObjects:tab1,view2,tab2, nil];
     
-    NSDictionary* tab1Nic = [[NSDictionary alloc]init];
-    tab1Nic
     
+    NSDictionary *dict1 = @{
+                            CYLTabBarItemTitle : @"首页",
+                            CYLTabBarItemImage : @"home_normal",
+                            CYLTabBarItemSelectedImage : @"home_highlight",
+                            };
+    NSDictionary *dict2 = @{
+                            CYLTabBarItemTitle : @"同城",
+                            CYLTabBarItemImage : @"mycity_normal",
+                            CYLTabBarItemSelectedImage : @"mycity_highlight",
+                            };
+    NSDictionary *dict3 = @{
+                            CYLTabBarItemTitle : @"消息",
+                            CYLTabBarItemImage : @"message_normal",
+                            CYLTabBarItemSelectedImage : @"message_highlight",
+                            };
+   
+    NSArray *tabBarItemsAttributes = @[
+                                       dict1,
+                                       dict2,
+                                       dict3
+                                       ];
+    self.tabBarItemsAttributes = tabBarItemsAttributes;
     [self setViewControllers:viewArray];
     // Do any additional setup after loading the view, typically from a nib.
 }

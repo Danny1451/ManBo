@@ -16,6 +16,8 @@
 		C1266FFA1BEC94DC003ED461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1266FF81BEC94DC003ED461 /* LaunchScreen.storyboard */; };
 		C12670051BEC94DC003ED461 /* TPOneClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C12670041BEC94DC003ED461 /* TPOneClientTests.m */; };
 		C12670101BEC94DC003ED461 /* TPOneClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C126700F1BEC94DC003ED461 /* TPOneClientUITests.m */; };
+		C127E0371BF048D3001AE017 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C127E0351BF048D3001AE017 /* HomeViewController.m */; };
+		C127E0381BF048D3001AE017 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C127E0361BF048D3001AE017 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		C126700B1BEC94DC003ED461 /* TPOneClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TPOneClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C126700F1BEC94DC003ED461 /* TPOneClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOneClientUITests.m; sourceTree = "<group>"; };
 		C12670111BEC94DC003ED461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C127E0341BF048D3001AE017 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		C127E0351BF048D3001AE017 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		C127E0361BF048D3001AE017 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		C71B262E7853CEB11DA4ABA6 /* Pods-TPOneClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPOneClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-TPOneClient/Pods-TPOneClient.release.xcconfig"; sourceTree = "<group>"; };
 		F86D1F8E58CCABD08DEDD83A /* Pods-TPOneClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPOneClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TPOneClient/Pods-TPOneClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +125,9 @@
 				C1266FEE1BEC94DC003ED461 /* AppDelegate.m */,
 				C1266FF01BEC94DC003ED461 /* ViewController.h */,
 				C1266FF11BEC94DC003ED461 /* ViewController.m */,
+				C127E0341BF048D3001AE017 /* HomeViewController.h */,
+				C127E0351BF048D3001AE017 /* HomeViewController.m */,
+				C127E0361BF048D3001AE017 /* HomeViewController.xib */,
 				C1266FF31BEC94DC003ED461 /* Main.storyboard */,
 				C1266FF61BEC94DC003ED461 /* Assets.xcassets */,
 				C1266FF81BEC94DC003ED461 /* LaunchScreen.storyboard */,
@@ -273,6 +281,7 @@
 				C1266FFA1BEC94DC003ED461 /* LaunchScreen.storyboard in Resources */,
 				C1266FF71BEC94DC003ED461 /* Assets.xcassets in Resources */,
 				C1266FF51BEC94DC003ED461 /* Main.storyboard in Resources */,
+				C127E0381BF048D3001AE017 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +357,7 @@
 				C1266FF21BEC94DC003ED461 /* ViewController.m in Sources */,
 				C1266FEF1BEC94DC003ED461 /* AppDelegate.m in Sources */,
 				C1266FEC1BEC94DC003ED461 /* main.m in Sources */,
+				C127E0371BF048D3001AE017 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
