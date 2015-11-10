@@ -18,6 +18,7 @@
 		C12670101BEC94DC003ED461 /* TPOneClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C126700F1BEC94DC003ED461 /* TPOneClientUITests.m */; };
 		C127E0371BF048D3001AE017 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C127E0351BF048D3001AE017 /* HomeViewController.m */; };
 		C127E0381BF048D3001AE017 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C127E0361BF048D3001AE017 /* HomeViewController.xib */; };
+		C17F8C6A1BF1A2D600ECB62B /* EGUAsynImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C17F8C691BF1A2D600ECB62B /* EGUAsynImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		C127E0341BF048D3001AE017 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		C127E0351BF048D3001AE017 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C127E0361BF048D3001AE017 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		C17F8C681BF1A2D600ECB62B /* EGUAsynImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGUAsynImageView.h; sourceTree = "<group>"; };
+		C17F8C691BF1A2D600ECB62B /* EGUAsynImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGUAsynImageView.m; sourceTree = "<group>"; };
 		C71B262E7853CEB11DA4ABA6 /* Pods-TPOneClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPOneClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-TPOneClient/Pods-TPOneClient.release.xcconfig"; sourceTree = "<group>"; };
 		F86D1F8E58CCABD08DEDD83A /* Pods-TPOneClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPOneClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TPOneClient/Pods-TPOneClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				C1266FED1BEC94DC003ED461 /* AppDelegate.h */,
+				C17F8C681BF1A2D600ECB62B /* EGUAsynImageView.h */,
+				C17F8C691BF1A2D600ECB62B /* EGUAsynImageView.m */,
 				C1266FEE1BEC94DC003ED461 /* AppDelegate.m */,
 				C1266FF01BEC94DC003ED461 /* ViewController.h */,
 				C1266FF11BEC94DC003ED461 /* ViewController.m */,
@@ -356,6 +361,7 @@
 			files = (
 				C1266FF21BEC94DC003ED461 /* ViewController.m in Sources */,
 				C1266FEF1BEC94DC003ED461 /* AppDelegate.m in Sources */,
+				C17F8C6A1BF1A2D600ECB62B /* EGUAsynImageView.m in Sources */,
 				C1266FEC1BEC94DC003ED461 /* main.m in Sources */,
 				C127E0371BF048D3001AE017 /* HomeViewController.m in Sources */,
 			);
