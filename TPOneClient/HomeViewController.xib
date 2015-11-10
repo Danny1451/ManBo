@@ -24,17 +24,27 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Du-TS-15n">
-                    <rect key="frame" x="182" y="66" width="240" height="128"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Du-TS-15n" customClass="EGUAsynImageView">
+                    <rect key="frame" x="251" y="63" width="100" height="35"/>
                     <animations/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBv-bh-uZs">
+                    <rect key="frame" x="276" y="146" width="46" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="refreshCode:" destination="-1" eventType="touchUpInside" id="rOz-H4-LcQ"/>
+                    </connections>
+                </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="upk-Ra-3Cd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BAx-H3-XK3"/>
+                <constraint firstItem="eBv-bh-uZs" firstAttribute="top" secondItem="8Du-TS-15n" secondAttribute="bottom" constant="20" id="DSq-ci-h9G"/>
                 <constraint firstItem="8Du-TS-15n" firstAttribute="top" secondItem="upk-Ra-3Cd" secondAttribute="bottom" constant="10" id="Q9X-Lm-EFX"/>
                 <constraint firstItem="8Du-TS-15n" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Y46-LO-IZb"/>
+                <constraint firstItem="eBv-bh-uZs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dre-aF-Ocv"/>
                 <constraint firstItem="8Du-TS-15n" firstAttribute="top" secondItem="upk-Ra-3Cd" secondAttribute="bottom" constant="10" id="oKr-pL-wta"/>
                 <constraint firstItem="upk-Ra-3Cd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="sYf-87-GpX"/>
             </constraints>

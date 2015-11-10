@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGUAsynImageView.h"
 
 @interface HomeViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet EGUAsynImageView *imageView;
+- (IBAction)refreshCode:(id)sender;
 
 @end
