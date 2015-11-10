@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    UIImage * image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://open.play.cn/api/v1/user/captcha/get?client_id=730988&r=3733303938382D32313735333136303834373738383034352D2D393530373033383736373933393234303339"]]];
+    UIImage * image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://open.play.cn/api/v1/user/captcha/get?client_id=730988&r=3733303938382D32313833353536353934353836333034352D35363838333332393431303132383939313830"]]];
     
     [self.imageView setImage:image];
     
