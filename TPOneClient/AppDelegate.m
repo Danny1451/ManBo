@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <WeiboSDK.h>
+#import "Const.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +19,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:SINA_APP_KEY];
+    
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
+
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    return [WeiboSDK handleOpenURL:url delegate:self];
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

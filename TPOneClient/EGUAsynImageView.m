@@ -8,7 +8,10 @@
 
 #import "EGUAsynImageView.h"
 
-@implementation EGUAsynImageView
+#define RETRY_TIMES 5
+@implementation EGUAsynImageView{
+    NSInteger retryTimes;
+}
 
 @synthesize imageUrl = _imageUrl;
 @synthesize placeholderImage = _placeholderImage;
@@ -18,7 +21,7 @@
 
     self = [super initWithFrame:frame];
     if (self) {
-        
+        retryTimes = 0;
         self.layer.borderColor = [[UIColor whiteColor] CGColor];
         self.layer.borderWidth = 2.0;
         self.backgroundColor = [UIColor grayColor];
@@ -216,7 +219,7 @@
     
     connection = nil;
     loadData = nil;
-    
+    retryTimes = 0;
 }
 
 -(UIImage *)scaleImage:(UIImage *)img ToSize:(CGSize)itemSize{
@@ -236,9 +239,19 @@
     app.networkActivityIndicatorVisible = NO;
     NSLog(@"如果发生错误，则重新加载");
     //如果发生错误，则重新加载
+    
+    retryTimes++;
     connection = nil;
     loadData = nil;
-    [self loadImageNeedCache:YES];
+    
+    if (retryTimes < RETRY_TIMES) {
+        
+        [self loadImageNeedCache:YES];
+    }else{
+        
+        retryTimes = 0 ;
+    }
+    
 }
 
 @end
