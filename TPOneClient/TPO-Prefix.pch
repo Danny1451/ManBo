@@ -1,0 +1,56 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
+
+
+#ifndef TPOneClient_Prefix_h
+#define TPOneClient_Prefix_h
+
+// 定义EgamePaySdk版本号信息
+
+
+#define IS_DEBUG_MODE 1         // 是否是调试模式
+
+#if IS_DEBUG_MODE
+    #define TRACE(...) NSLog(__VA_ARGS__)
+#else
+    #define TRACE(...)
+#endif
+
+#define strIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
+/*================以下是ARC兼容指令================*/
+
+#ifndef PX_STRONG
+#if __has_feature(objc_arc)
+#define PX_STRONG strong
+#else
+#define PX_STRONG retain
+#endif
+#endif
+#ifndef PX_WEAK
+#if __has_feature(objc_arc_weak)
+#define PX_WEAK weak
+#elif __has_feature(objc_arc)
+#define PX_WEAK unsafe_unretained
+#else
+#define PX_WEAK assign
+#endif
+#endif
+
+#if !__has_feature(objc_arc)
+#define PX_AUTORELEASE(expression) expression
+#define PX_RELEASE(expression) expression
+#define PX_RETAIN(expression) expression
+#else
+#define PX_AUTORELEASE(expression) [expression autorelease]
+#define PX_RELEASE(expression) [expression release]
+#define PX_RETAIN(expression) [expression retain]
+#endif
+
+#endif

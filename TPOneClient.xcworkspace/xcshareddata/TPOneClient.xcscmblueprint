@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FBD953268845BF630B88329C1BA65F8F4689E8A8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6E84240FA9C405C613E4376270626C872725D390" : 0,
+    "FBD953268845BF630B88329C1BA65F8F4689E8A8" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D8E17B0C-619C-4407-91A3-33A2B9235961",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6E84240FA9C405C613E4376270626C872725D390" : "",
+    "FBD953268845BF630B88329C1BA65F8F4689E8A8" : "TPOneClient\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TPOneClient",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TPOneClient.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Danny1451\/LDAsynImageView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6E84240FA9C405C613E4376270626C872725D390"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Danny1451\/TPOneClient.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FBD953268845BF630B88329C1BA65F8F4689E8A8"
+    }
+  ]
+}

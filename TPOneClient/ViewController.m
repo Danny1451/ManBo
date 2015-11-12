@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "HomeViewController.h"
+#import "UserInfoViewController.h"
 
 @interface ViewController ()
 
@@ -22,25 +23,25 @@
     
     UITableViewController* tab1 = [[UITableViewController alloc] init];
     HomeViewController* view2 = [[HomeViewController alloc] init];
-    UITableViewController* tab2 = [[UITableViewController alloc] init];
+    UserInfoViewController* tab2 = [[UserInfoViewController alloc] init];
     [tab1.tabBarItem setTitle:@"tab1"];
     NSArray *viewArray = [[NSArray alloc] initWithObjects:tab1,view2,tab2, nil];
     
     
     NSDictionary *dict1 = @{
                             CYLTabBarItemTitle : @"首页",
-                            CYLTabBarItemImage : @"home_normal",
-                            CYLTabBarItemSelectedImage : @"home_highlight",
+                            CYLTabBarItemImage : @"first_normal",
+                            CYLTabBarItemSelectedImage : @"first_selected",
                             };
     NSDictionary *dict2 = @{
                             CYLTabBarItemTitle : @"同城",
-                            CYLTabBarItemImage : @"mycity_normal",
-                            CYLTabBarItemSelectedImage : @"mycity_highlight",
+                            CYLTabBarItemImage : @"second_normal",
+                            CYLTabBarItemSelectedImage : @"second_selected",
                             };
     NSDictionary *dict3 = @{
                             CYLTabBarItemTitle : @"消息",
-                            CYLTabBarItemImage : @"message_normal",
-                            CYLTabBarItemSelectedImage : @"message_highlight",
+                            CYLTabBarItemImage : @"third_normal",
+                            CYLTabBarItemSelectedImage : @"third_selected",
                             };
    
     NSArray *tabBarItemsAttributes = @[
