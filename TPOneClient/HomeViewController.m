@@ -62,7 +62,7 @@
 
 - (IBAction)refreshCode:(id)sender {
     
-    [self.imageView setImageUrlWithOutCache:@"https://open.play.cn/api/v1/user/captcha/get?client_id=730988&r=3733303938382D35333635313037363332393337343338312D38363532353439313239303230323337353433"];
+    [self.imageView setImageUrlWithOutCache:@"https://open.play.cn/api/v1/user/captcha/get?client_id=730988&r=3733303938382D35333635353231323635333035393338312D2D393636343337383539313736313438333433"];
 }
 
 -(void)clickCategory:(UITapGestureRecognizer *)gestureRecognizer
