@@ -49,12 +49,14 @@
         
         
         
-        WBAuthorizeRequest *reuqest = [WBAuthorizeRequest request];
-        reuqest.redirectURI = @"www.baidu.com";
-        reuqest.scope = @"all";
-        
-        [WeiboSDK sendRequest:reuqest];
-    
+        WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+        request.redirectURI = SINA_kRedirectURI;
+        request.scope = @"all";
+        request.userInfo = @{@"SSO_From": @"SendMessageToWeiboViewController",
+                             @"Other_Info_1": [NSNumber numberWithInt:123],
+                             @"Other_Info_2": @[@"obj1", @"obj2"],
+                             @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
+        [WeiboSDK sendRequest:request];
     
     }
     
