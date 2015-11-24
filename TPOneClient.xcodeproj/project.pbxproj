@@ -32,6 +32,9 @@
 		C13123201BF323E900579644 /* third_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C13123141BF323E900579644 /* third_selected@2x.png */; };
 		C13123241BF32A4100579644 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C13123221BF32A4100579644 /* UserInfoViewController.m */; };
 		C13123251BF32A4100579644 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C13123231BF32A4100579644 /* UserInfoViewController.xib */; };
+		C1330D3C1C044D1B00534061 /* HttpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C1330D3B1C044D1B00534061 /* HttpUtils.m */; };
+		C1330D3F1C045D4D00534061 /* StorageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C1330D3E1C045D4D00534061 /* StorageUtils.m */; };
+		C1330D421C047D1000534061 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C1330D411C047D1000534061 /* UserInfo.m */; };
 		C17F8C6A1BF1A2D600ECB62B /* EGUAsynImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C17F8C691BF1A2D600ECB62B /* EGUAsynImageView.m */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +93,12 @@
 		C13123231BF32A4100579644 /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
 		C13123261BF32E6000579644 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 		C13123271BF3344600579644 /* TPO-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPO-Prefix.pch"; sourceTree = "<group>"; };
+		C1330D3A1C044D1B00534061 /* HttpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpUtils.h; sourceTree = "<group>"; };
+		C1330D3B1C044D1B00534061 /* HttpUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpUtils.m; sourceTree = "<group>"; };
+		C1330D3D1C045D4D00534061 /* StorageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageUtils.h; sourceTree = "<group>"; };
+		C1330D3E1C045D4D00534061 /* StorageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageUtils.m; sourceTree = "<group>"; };
+		C1330D401C047D1000534061 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		C1330D411C047D1000534061 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		C17F8C681BF1A2D600ECB62B /* EGUAsynImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGUAsynImageView.h; sourceTree = "<group>"; };
 		C17F8C691BF1A2D600ECB62B /* EGUAsynImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGUAsynImageView.m; sourceTree = "<group>"; };
 		C71B262E7853CEB11DA4ABA6 /* Pods-TPOneClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPOneClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-TPOneClient/Pods-TPOneClient.release.xcconfig"; sourceTree = "<group>"; };
@@ -156,25 +165,20 @@
 			isa = PBXGroup;
 			children = (
 				C1266FED1BEC94DC003ED461 /* AppDelegate.h */,
-				C17F8C681BF1A2D600ECB62B /* EGUAsynImageView.h */,
-				C13123271BF3344600579644 /* TPO-Prefix.pch */,
-				C17F8C691BF1A2D600ECB62B /* EGUAsynImageView.m */,
 				C1266FEE1BEC94DC003ED461 /* AppDelegate.m */,
-				C1266FF01BEC94DC003ED461 /* ViewController.h */,
-				C1266FF11BEC94DC003ED461 /* ViewController.m */,
 				C13123261BF32E6000579644 /* Const.h */,
-				C13123211BF32A4100579644 /* UserInfoViewController.h */,
-				C13123221BF32A4100579644 /* UserInfoViewController.m */,
-				C13123231BF32A4100579644 /* UserInfoViewController.xib */,
-				C127E0341BF048D3001AE017 /* HomeViewController.h */,
-				C127E0351BF048D3001AE017 /* HomeViewController.m */,
-				C13122E81BF322B000579644 /* Res */,
-				C127E0361BF048D3001AE017 /* HomeViewController.xib */,
-				C1266FF31BEC94DC003ED461 /* Main.storyboard */,
+				C1330D3D1C045D4D00534061 /* StorageUtils.h */,
+				C1330D3E1C045D4D00534061 /* StorageUtils.m */,
+				C13123271BF3344600579644 /* TPO-Prefix.pch */,
+				C1266FFB1BEC94DC003ED461 /* Info.plist */,
 				C1266FF61BEC94DC003ED461 /* Assets.xcassets */,
 				C1266FF81BEC94DC003ED461 /* LaunchScreen.storyboard */,
-				C1266FFB1BEC94DC003ED461 /* Info.plist */,
+				C1330D431C047D3300534061 /* model */,
+				C1330D441C047D4600534061 /* net */,
+				C13122E81BF322B000579644 /* Res */,
 				C1266FEA1BEC94DC003ED461 /* Supporting Files */,
+				C1330D451C047D5F00534061 /* utils */,
+				C1330D461C047D7300534061 /* views */,
 			);
 			path = TPOneClient;
 			sourceTree = "<group>";
@@ -222,6 +226,49 @@
 				C13123141BF323E900579644 /* third_selected@2x.png */,
 			);
 			path = Res;
+			sourceTree = "<group>";
+		};
+		C1330D431C047D3300534061 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C1330D401C047D1000534061 /* UserInfo.h */,
+				C1330D411C047D1000534061 /* UserInfo.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		C1330D441C047D4600534061 /* net */ = {
+			isa = PBXGroup;
+			children = (
+				C1330D3A1C044D1B00534061 /* HttpUtils.h */,
+				C1330D3B1C044D1B00534061 /* HttpUtils.m */,
+			);
+			name = net;
+			sourceTree = "<group>";
+		};
+		C1330D451C047D5F00534061 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				C17F8C681BF1A2D600ECB62B /* EGUAsynImageView.h */,
+				C17F8C691BF1A2D600ECB62B /* EGUAsynImageView.m */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		C1330D461C047D7300534061 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C1266FF01BEC94DC003ED461 /* ViewController.h */,
+				C1266FF11BEC94DC003ED461 /* ViewController.m */,
+				C13123211BF32A4100579644 /* UserInfoViewController.h */,
+				C13123221BF32A4100579644 /* UserInfoViewController.m */,
+				C13123231BF32A4100579644 /* UserInfoViewController.xib */,
+				C127E0341BF048D3001AE017 /* HomeViewController.h */,
+				C127E0351BF048D3001AE017 /* HomeViewController.m */,
+				C127E0361BF048D3001AE017 /* HomeViewController.xib */,
+				C1266FF31BEC94DC003ED461 /* Main.storyboard */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 		CB3FED60F6AB5703AF8775AB /* Pods */ = {
@@ -429,11 +476,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1266FF21BEC94DC003ED461 /* ViewController.m in Sources */,
+				C1330D421C047D1000534061 /* UserInfo.m in Sources */,
 				C1266FEF1BEC94DC003ED461 /* AppDelegate.m in Sources */,
 				C17F8C6A1BF1A2D600ECB62B /* EGUAsynImageView.m in Sources */,
 				C1266FEC1BEC94DC003ED461 /* main.m in Sources */,
 				C127E0371BF048D3001AE017 /* HomeViewController.m in Sources */,
 				C13123241BF32A4100579644 /* UserInfoViewController.m in Sources */,
+				C1330D3C1C044D1B00534061 /* HttpUtils.m in Sources */,
+				C1330D3F1C045D4D00534061 /* StorageUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
