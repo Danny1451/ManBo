@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "HomeViewController.h"
 #import "UserInfoViewController.h"
+#import <ZBarReaderViewController.h>
 
 @interface ViewController ()
 
@@ -21,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UITableViewController* tab1 = [[UITableViewController alloc] init];
+    ZBarReaderViewController* tab1 = [[ZBarReaderViewController alloc] init];
     HomeViewController* view2 = [[HomeViewController alloc] init];
     UserInfoViewController* tab2 = [[UserInfoViewController alloc] init];
     [tab1.tabBarItem setTitle:@"tab1"];

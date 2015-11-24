@@ -9,6 +9,7 @@ target 'TPOneClient' do
 	pod 'CYLTabBarController'
 	pod 'WeiboSDK'
 	pod 'YTKNetwork'
+	pod 'ZBarSDK'
 end
 
 target 'TPOneClientTests' do
