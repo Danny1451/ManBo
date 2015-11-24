@@ -17,6 +17,9 @@
 
 @implementation ViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    TRACE(@"applear");
+}
 
 
 - (void)viewDidLoad {

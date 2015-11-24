@@ -23,6 +23,12 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    TRACE(@"view  show ");
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -40,15 +46,15 @@
 
 - (IBAction)btnLogin:(id)sender {
     //换取sina 的token
-    if (![WeiboSDK isWeiboAppInstalled]){
-        //没装围脖
-        TRACE(@"没装微博%@",[NSURL URLWithString:[WeiboSDK getWeiboAppInstallUrl]]);
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[WeiboSDK getWeiboAppInstallUrl]]];
-        
-    }else{
-        
-        
-        
+//    if (![WeiboSDK isWeiboAppInstalled]){
+//        //没装围脖
+//        TRACE(@"没装微博%@",[NSURL URLWithString:[WeiboSDK getWeiboAppInstallUrl]]);
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[WeiboSDK getWeiboAppInstallUrl]]];
+//        
+//    }else{
+//        
+//        
+//        
         WBAuthorizeRequest *request = [WBAuthorizeRequest request];
         request.redirectURI = SINA_kRedirectURI;
         request.scope = @"all";
@@ -58,7 +64,7 @@
                              @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
         [WeiboSDK sendRequest:request];
     
-    }
+//    }
     
 }
 @end
