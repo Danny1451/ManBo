@@ -7,11 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserInfo.h"
+#import "EGUAsynImageView.h"
 
 @interface UserInfoViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *userNameLab;
+@property (strong, nonatomic) IBOutlet EGUAsynImageView *headImage;
+@property (strong, nonatomic) IBOutlet UILabel *locationLab;
+@property (strong, nonatomic) IBOutlet UILabel *friendLab;
+@property (strong, nonatomic) IBOutlet UILabel *fansLab;
+@property (strong, nonatomic) IBOutlet UILabel *statusLab;
 
 - (IBAction)btnLogin:(id)sender;
 
+
+- (void)startGetUserInfo;
 @end

@@ -9,8 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "CYLTabBarController.h"
 
+#import "HomeViewController.h"
+#import "UserInfoViewController.h"
+#import <ZBarReaderViewController.h>
+
 @interface ViewController : CYLTabBarController
 
+@property(nonatomic,copy) ZBarReaderController* tab1;
+@property(nonatomic,copy) HomeViewController* view2;
+@property(nonatomic,copy) UserInfoViewController* tab2;
 
 @end
 

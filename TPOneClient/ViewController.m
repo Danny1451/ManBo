@@ -7,9 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "HomeViewController.h"
-#import "UserInfoViewController.h"
-#import <ZBarReaderViewController.h>
+
 
 @interface ViewController ()
 
@@ -25,11 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    ZBarReaderViewController* tab1 = [[ZBarReaderViewController alloc] init];
-    HomeViewController* view2 = [[HomeViewController alloc] init];
-    UserInfoViewController* tab2 = [[UserInfoViewController alloc] init];
-    [tab1.tabBarItem setTitle:@"tab1"];
-    NSArray *viewArray = [[NSArray alloc] initWithObjects:tab1,view2,tab2, nil];
+    _tab1 = [[ZBarReaderViewController alloc] init];
+    _view2 = [[HomeViewController alloc] init];
+    _tab2 = [[UserInfoViewController alloc] init];
+    [_tab1.tabBarItem setTitle:@"tab1"];
+    NSArray *viewArray = [[NSArray alloc] initWithObjects:_tab1,_view2,_tab2, nil];
     
     
     NSDictionary *dict1 = @{

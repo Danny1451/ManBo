@@ -23,9 +23,9 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
-    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
-    securityPolicy.allowInvalidCertificates = YES;
-    manager.securityPolicy = securityPolicy;
+//    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
+//    securityPolicy.allowInvalidCertificates = YES;
+//    manager.securityPolicy = securityPolicy;
     
     //设置请求格式
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];

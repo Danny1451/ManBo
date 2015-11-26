@@ -32,8 +32,8 @@
 #define BOOL_YES @"YES"
 #define BOOL_NO @"NO"
 
-//#define URL_HEAD @"https://%@%@"
-#define URL_HEAD @"http://%@%@"
+#define URL_HEAD @"https://%@%@"
+//#define URL_HEAD @"http://%@%@"
 
 //#define OPEN_PLAY_CN_HOST @"192.168.251.64"
 //#define OPEN_PLAY_CN_HOST @"192.168.251.51:8101"

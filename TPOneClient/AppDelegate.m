@@ -11,6 +11,8 @@
 
 #import "StorageUtils.h"
 
+#import "ViewController.h"
+
 @interface WBBaseRequest ()
 - (void)debugPrint;
 @end
@@ -100,11 +102,7 @@
         NSString *message = [NSString stringWithFormat:@"%@: %d\nresponse.userId: %@\nresponse.accessToken: %@\n%@: %@\n%@: %@", NSLocalizedString(@"响应状态", nil), (int)response.statusCode,[(WBAuthorizeResponse *)response userID], [(WBAuthorizeResponse *)response accessToken],  NSLocalizedString(@"响应UserInfo数据", nil), response.userInfo, NSLocalizedString(@"原请求UserInfo数据", nil), response.requestUserInfo];
         TRACE(message);
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                        message:message
-                                                       delegate:nil
-                                              cancelButtonTitle:NSLocalizedString(@"确定", nil)
-                                              otherButtonTitles:nil];
+
         
         self.wbtoken = [(WBAuthorizeResponse *)response accessToken];
         
@@ -116,7 +114,19 @@
         
         self.wbCurrentUserID = [(WBAuthorizeResponse *)response userID];
         self.wbRefreshToken = [(WBAuthorizeResponse *)response refreshToken];
-        [alert show];
+        
+        if([self.window.rootViewController isKindOfClass:[ViewController class]]){
+            
+            ViewController* root =(ViewController*)self.window.rootViewController;
+            
+            [root.tab2 startGetUserInfo];
+            
+            
+            
+        }
+        
+        
+//        [alert show];
     }
     else if ([response isKindOfClass:WBPaymentResponse.class])
     {
