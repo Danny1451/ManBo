@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4394B3CFD4DECE2FD22A6D68 /* libPods-TPOneClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE8C372ADD2B6B79CC9624B /* libPods-TPOneClient.a */; };
+		C109F6311C085CEE00601D1C /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = C109F6301C085CEE00601D1C /* Status.m */; };
 		C1266FEC1BEC94DC003ED461 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1266FEB1BEC94DC003ED461 /* main.m */; };
 		C1266FEF1BEC94DC003ED461 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1266FEE1BEC94DC003ED461 /* AppDelegate.m */; };
 		C1266FF21BEC94DC003ED461 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1266FF11BEC94DC003ED461 /* ViewController.m */; };
@@ -57,6 +58,8 @@
 
 /* Begin PBXFileReference section */
 		6BE8C372ADD2B6B79CC9624B /* libPods-TPOneClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TPOneClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C109F62F1C085CEE00601D1C /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		C109F6301C085CEE00601D1C /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 		C1266FE71BEC94DC003ED461 /* TPOneClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPOneClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1266FEB1BEC94DC003ED461 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C1266FED1BEC94DC003ED461 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -231,6 +234,8 @@
 		C1330D431C047D3300534061 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				C109F62F1C085CEE00601D1C /* Status.h */,
+				C109F6301C085CEE00601D1C /* Status.m */,
 				C1330D401C047D1000534061 /* UserInfo.h */,
 				C1330D411C047D1000534061 /* UserInfo.m */,
 			);
@@ -478,6 +483,7 @@
 				C1266FF21BEC94DC003ED461 /* ViewController.m in Sources */,
 				C1330D421C047D1000534061 /* UserInfo.m in Sources */,
 				C1266FEF1BEC94DC003ED461 /* AppDelegate.m in Sources */,
+				C109F6311C085CEE00601D1C /* Status.m in Sources */,
 				C17F8C6A1BF1A2D600ECB62B /* EGUAsynImageView.m in Sources */,
 				C1266FEC1BEC94DC003ED461 /* main.m in Sources */,
 				C127E0371BF048D3001AE017 /* HomeViewController.m in Sources */,

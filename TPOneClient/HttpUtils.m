@@ -92,6 +92,21 @@
     
 }
 
++ (void) requestFriendStatusAccessToken:(NSString *)token
+                                sinceId:(NSInteger)sId
+                                  maxId:(NSInteger)mId
+                                  count:(int)count
+                                   page:(int)pages
+                                baseApp:(BOOL)isBase
+                                feature:(int)types
+                              trim_user:(BOOL)needUser
+                               callback:(ReqBlock)callback{
+    
+    
+    
+    
+}
+
 //+ (void) requestInitCallback:(ReqBlock)callback{
 // 
 //    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];

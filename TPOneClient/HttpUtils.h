@@ -69,6 +69,18 @@
 #define VISITOR_STATE_UNEXIST 1000
 #define VISITOR_STATE_EXIST 1001
 
+
+
+
+typedef NS_ENUM(NSUInteger, Features) {
+    FeaturesFull = 0,
+    FeaturesOrigin = 1,
+    FeaturesImage = 2,
+    FeaturesVideo = 3,
+    FeaturesMusic = 4
+};
+
+
 typedef void(^ReqBlock)(int resultCode, id resultObj);
 
 
@@ -79,5 +91,15 @@ typedef void(^ReqBlock)(int resultCode, id resultObj);
                                 uid:(NSString* ) uid
                            callback: (ReqBlock) callback;
 
+
++ (void) requestFriendStatusAccessToken: (NSString *)token
+                                sinceId: (NSInteger) sId
+                                  maxId: (NSInteger) mId
+                                  count: (int) count
+                                   page: (int) pages
+                                baseApp: (BOOL) isBase
+                                feature: (int) types
+                              trim_user: (BOOL) needUser
+                               callback: (ReqBlock) callback;
 
 @end
