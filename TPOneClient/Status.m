@@ -10,4 +10,60 @@
 
 @implementation Status
 
++ (Status *) parseJsonData:(id)jsonDic{
+    Status * res = [[Status alloc] init];
+    
+    res.user = [UserInfo parseJsonData:[jsonDic objectForKey:@"user"]];
+    
+    res.sId = [[jsonDic objectForKey:@"id"] integerValue];
+    
+    res.text = [jsonDic objectForKey:@"text"];
+    
+    res.souce = [jsonDic objectForKey:@"source"];
+    res.timeCreated = [jsonDic objectForKey:@"created_at"];
+    
+    //获取相关微博
+    res.releateStatus = [self parseJsonData:[jsonDic objectForKey:@"retweeted_status"]];
+    
+    res.repostCount = [[jsonDic objectForKey:@"reposts_count"] integerValue];
+    res.commentsCount = [[jsonDic objectForKey:@"comments_count"] integerValue];
+    res.attitudeCount = [[jsonDic objectForKey:@"attitudes_count"] integerValue];
+    
+    res.isLongText = [[jsonDic objectForKey:@"isLongText"] boolValue];
+    
+    
+    NSMutableArray* urlArray = [[NSMutableArray alloc] init];
+    
+    NSArray* urls = [jsonDic objectForKey:@"pic_urls"];
+    
+    for (id temp  in urls) {
+        NSString* thumbnail = [temp objectForKey:@"thumbnail_pic"];
+        
+        [urlArray addObject:thumbnail];
+    }
+    
+    
+    
+    
+    res.thumnailPic = [jsonDic objectForKey:@"thumbnail_pic"];
+    res.bminddlePic = [jsonDic objectForKey:@"bmiddle_pic"];
+    res.originalPic = [jsonDic objectForKey:@"original_pic"];
+    
+    return res;
+}
+
+
++ (NSMutableArray*) parseToStatusArray:(id)jsonDic{
+    
+    NSMutableArray* res = [[NSMutableArray alloc] init];
+    
+    NSArray* statuses = [jsonDic objectForKey:@"statuses"];
+    
+    for (id temp in statuses) {
+        Status* tempStatus = [self parseJsonData:temp];
+        [res addObject:tempStatus];
+    }
+    
+    return res;
+}
 @end

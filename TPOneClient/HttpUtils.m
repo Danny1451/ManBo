@@ -10,6 +10,7 @@
 #import "HttpUtils.h"
 #import "AFNetworking.h"
 #import "UserInfo.h"
+#import "Status.h"
 
 @implementation HttpUtils
 
@@ -76,8 +77,8 @@
         
         if (resultCode == CODE_OK) {
             
-            UserInfo *info = [UserInfo parseJsonData:resultObj];
-            callback(CODE_OK, info);
+            NSMutableArray* statusesArray = [Status parseToStatusArray:resultObj];
+            callback(CODE_OK, statusesArray);
             
         }else{
             
@@ -93,8 +94,8 @@
 }
 
 + (void) requestFriendStatusAccessToken:(NSString *)token
-                                sinceId:(NSInteger)sId
-                                  maxId:(NSInteger)mId
+                                sinceId:(long long)sId
+                                  maxId:(long long)mId
                                   count:(int)count
                                    page:(int)pages
                                 baseApp:(BOOL)isBase
@@ -102,7 +103,47 @@
                               trim_user:(BOOL)needUser
                                callback:(ReqBlock)callback{
     
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     
+    
+    [params setValue:token forKey:@"access_token"];
+    [params setValue:[NSNumber numberWithLongLong:sId] forKey:@"since_id"];
+    [params setValue:[NSNumber numberWithLongLong:mId] forKey:@"max_id"];
+    
+    [params setValue:[NSNumber numberWithInt:count] forKey:@"count"];
+    
+    [params setValue:[NSNumber numberWithInt:pages] forKey:@"page"];
+    
+    if (isBase) {
+        [params setValue:[NSNumber numberWithInt:1] forKey:@"base_app"];
+    }
+    
+    [params setValue:[NSNumber numberWithInt:types] forKey:@"feature"];
+    
+    if (!needUser) {
+        [params setValue:[NSNumber numberWithInt:1] forKey:@"trim_user"];
+    }
+    
+    
+    NSString *url = [NSString stringWithFormat:URL_HEAD,URL_HOST,URL_STATUSES_FRIENDS_TIMELINE];
+    
+    [self requestGetWithDic:params url:url Callback:^(int resultCode, id resultObj) {
+        
+        if (resultCode == CODE_OK) {
+            
+            UserInfo *info = [UserInfo parseJsonData:resultObj];
+            callback(CODE_OK, info);
+            
+        }else{
+            
+            callback(resultCode,nil);
+        }
+        
+        
+        
+        
+        
+    }];
     
     
 }

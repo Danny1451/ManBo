@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
-                <outlet property="imageView" destination="8Du-TS-15n" id="znX-Gx-Cyl"/>
-                <outlet property="titleLabel" destination="upk-Ra-3Cd" id="vS1-mC-pnQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,37 +15,41 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="HomeView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upk-Ra-3Cd">
-                    <rect key="frame" x="260" y="30" width="82" height="21"/>
-                    <animations/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Du-TS-15n" customClass="EGUAsynImageView">
-                    <rect key="frame" x="251" y="63" width="100" height="35"/>
-                    <animations/>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBv-bh-uZs">
-                    <rect key="frame" x="276" y="146" width="46" height="30"/>
+                    <rect key="frame" x="277" y="54" width="46" height="30"/>
                     <animations/>
                     <state key="normal" title="Button"/>
                     <connections>
                         <action selector="refreshCode:" destination="-1" eventType="touchUpInside" id="rOz-H4-LcQ"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-ZE-kEH">
+                    <rect key="frame" x="0.0" y="208" width="600" height="392"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="upk-Ra-3Cd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BAx-H3-XK3"/>
-                <constraint firstItem="eBv-bh-uZs" firstAttribute="top" secondItem="8Du-TS-15n" secondAttribute="bottom" constant="20" id="DSq-ci-h9G"/>
-                <constraint firstItem="8Du-TS-15n" firstAttribute="top" secondItem="upk-Ra-3Cd" secondAttribute="bottom" constant="10" id="Q9X-Lm-EFX"/>
-                <constraint firstItem="8Du-TS-15n" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Y46-LO-IZb"/>
+                <constraint firstAttribute="bottom" secondItem="aWS-ZE-kEH" secondAttribute="bottom" constant="264" id="EBO-fS-jyc"/>
+                <constraint firstItem="aWS-ZE-kEH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Lyd-5F-aGH"/>
+                <constraint firstItem="aWS-ZE-kEH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NUf-LT-mkP"/>
                 <constraint firstItem="eBv-bh-uZs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dre-aF-Ocv"/>
-                <constraint firstItem="8Du-TS-15n" firstAttribute="top" secondItem="upk-Ra-3Cd" secondAttribute="bottom" constant="10" id="oKr-pL-wta"/>
-                <constraint firstItem="upk-Ra-3Cd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="sYf-87-GpX"/>
+                <constraint firstAttribute="trailing" secondItem="aWS-ZE-kEH" secondAttribute="trailing" id="fGO-ZA-k1g"/>
+                <constraint firstAttribute="bottom" secondItem="aWS-ZE-kEH" secondAttribute="bottom" id="x0L-E2-qI2"/>
             </constraints>
         </view>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BE1-XE-cgc">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BE1-XE-cgc" id="bUR-ei-HPw">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <animations/>
+            </tableViewCellContentView>
+            <animations/>
+            <point key="canvasLocation" x="-234" y="170"/>
+        </tableViewCell>
     </objects>
 </document>

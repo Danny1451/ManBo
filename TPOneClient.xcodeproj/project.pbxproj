@@ -36,6 +36,7 @@
 		C1330D3C1C044D1B00534061 /* HttpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C1330D3B1C044D1B00534061 /* HttpUtils.m */; };
 		C1330D3F1C045D4D00534061 /* StorageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C1330D3E1C045D4D00534061 /* StorageUtils.m */; };
 		C1330D421C047D1000534061 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C1330D411C047D1000534061 /* UserInfo.m */; };
+		C13C91F51C0F1E5200602E90 /* StatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C13C91F41C0F1E5200602E90 /* StatusTableViewCell.m */; };
 		C17F8C6A1BF1A2D600ECB62B /* EGUAsynImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C17F8C691BF1A2D600ECB62B /* EGUAsynImageView.m */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,8 @@
 		C1330D3E1C045D4D00534061 /* StorageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageUtils.m; sourceTree = "<group>"; };
 		C1330D401C047D1000534061 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		C1330D411C047D1000534061 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		C13C91F31C0F1E5200602E90 /* StatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusTableViewCell.h; sourceTree = "<group>"; };
+		C13C91F41C0F1E5200602E90 /* StatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusTableViewCell.m; sourceTree = "<group>"; };
 		C17F8C681BF1A2D600ECB62B /* EGUAsynImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGUAsynImageView.h; sourceTree = "<group>"; };
 		C17F8C691BF1A2D600ECB62B /* EGUAsynImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGUAsynImageView.m; sourceTree = "<group>"; };
 		C71B262E7853CEB11DA4ABA6 /* Pods-TPOneClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPOneClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-TPOneClient/Pods-TPOneClient.release.xcconfig"; sourceTree = "<group>"; };
@@ -272,6 +275,8 @@
 				C127E0351BF048D3001AE017 /* HomeViewController.m */,
 				C127E0361BF048D3001AE017 /* HomeViewController.xib */,
 				C1266FF31BEC94DC003ED461 /* Main.storyboard */,
+				C13C91F31C0F1E5200602E90 /* StatusTableViewCell.h */,
+				C13C91F41C0F1E5200602E90 /* StatusTableViewCell.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -481,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1266FF21BEC94DC003ED461 /* ViewController.m in Sources */,
+				C13C91F51C0F1E5200602E90 /* StatusTableViewCell.m in Sources */,
 				C1330D421C047D1000534061 /* UserInfo.m in Sources */,
 				C1266FEF1BEC94DC003ED461 /* AppDelegate.m in Sources */,
 				C109F6311C085CEE00601D1C /* Status.m in Sources */,
@@ -633,7 +639,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/TPOneClient/TPO-Prefix.pch";
 				INFOPLIST_FILE = TPOneClient/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danny.xmvbo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -647,7 +653,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/TPOneClient/TPO-Prefix.pch";
 				INFOPLIST_FILE = TPOneClient/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danny.xmvbo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

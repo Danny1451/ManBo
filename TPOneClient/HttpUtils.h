@@ -44,7 +44,7 @@
 #define BULLET_HOST @"192.168.251.68"
 
 #define URL_USER_INFO @"/2/users/show.json"
-
+#define URL_STATUSES_FRIENDS_TIMELINE @"/2/statuses/friends_timeline.json"
 
 #define URL_INIT @"/api/v1/user/common/get_parameter.json"
 #define URL_ACCESS_TOKEN @"/oauth/access_token"
@@ -93,8 +93,8 @@ typedef void(^ReqBlock)(int resultCode, id resultObj);
 
 
 + (void) requestFriendStatusAccessToken: (NSString *)token
-                                sinceId: (NSInteger) sId
-                                  maxId: (NSInteger) mId
+                                sinceId: (long long) sId
+                                  maxId: (long long) mId
                                   count: (int) count
                                    page: (int) pages
                                 baseApp: (BOOL) isBase
