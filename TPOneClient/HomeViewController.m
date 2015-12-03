@@ -7,12 +7,17 @@
 //
 
 #import "HomeViewController.h"
+#import "HttpUtils.h"
+#import "StorageUtils.h"
+#import "StatusTableViewCell.h"
 
 @interface HomeViewController ()
 
 @end
 
-@implementation HomeViewController
+@implementation HomeViewController {
+    NSArray* statuses;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,10 +33,12 @@
     //[self.imageView setImage:newImage];
 //    [self.imageView setImageUrlWithOutCache:@"https://open.play.cn/api/v1/user/captcha/get?client_id=730988&r=3733303938382D35333635313037363332393337343338312D38363532353439313239303230323337353433"];
     
-    [self.imageView setUserInteractionEnabled:YES];
+//    [self.imageView setUserInteractionEnabled:YES];
     
-    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickCategory:)]];
-    
+//    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickCategory:)]];
+    statuses = [[NSArray alloc] init];
+    [self.statusTableView setDelegate:self];
+    [self.statusTableView setDataSource:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,7 +69,35 @@
 
 - (IBAction)refreshCode:(id)sender {
     
-    [self.imageView setImageUrlWithOutCache:@"https://open.play.cn/api/v1/user/captcha/get?client_id=730988&r=3733303938382D35333635353231323635333035393338312D2D393636343337383539313736313438333433"];
+    //NSString* uid = [[StorageUtils shareInstance] uid];
+    NSString* token = [[StorageUtils shareInstance] accessToken];
+    
+    [HttpUtils requestFriendStatusAccessToken:token
+                                      sinceId:0
+                                        maxId:0
+                                        count:20
+                                         page:1
+                                      baseApp:0
+                                      feature:0
+                                    trim_user:YES
+                                     callback:^(int resultCode, id resultObj) {
+       
+        
+                                         if (resultCode == CODE_OK) {
+                                             
+                                             statuses = resultObj;
+                                             [self.statusTableView reloadData];
+                                             TRACE(@"列表内容为：%@",[statuses description]);
+                                         }else{
+                                             
+                                             TRACE(@"获取微博错误");
+                                             
+                                         }
+        
+        
+        
+    }];
+
 }
 
 -(void)clickCategory:(UITapGestureRecognizer *)gestureRecognizer
@@ -77,6 +112,29 @@
         [self refreshCode:nil];
     }
     
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [statuses count];
+}
+
+- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 140;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    static NSString *CellIdentifier = @"CustomCell";
+    StatusTableViewCell* cell = [ tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"StatusTableViewCell" owner:nil options:nil] lastObject];
+       // cell = [[StatusTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+    }
+    
+    [cell showDate:[statuses objectAtIndex:indexPath.row]];
+    
+    return cell;
 }
 
 @end

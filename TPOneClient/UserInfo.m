@@ -30,4 +30,26 @@
     
 }
 
+-(id)copyWithZone:(NSZone *)zone{
+    
+    UserInfo *newModel = [[[self class] allocWithZone:zone] init];
+    
+    newModel.name = [self name];
+    newModel.location = [self location];
+    newModel.descrip = [self descrip];
+    newModel.profileUrl = [self profileUrl];
+    
+    newModel.hdHead = [self hdHead];
+    newModel.largeHead = [self largeHead];
+    
+    newModel.followers = [self followers];
+    newModel.friends = [self friends];
+    newModel.statuses = [self statuses];
+    
+    newModel.urank = [self urank];
+    
+    
+    return newModel;
+}
+
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UserInfo : NSObject
+@interface UserInfo : NSObject<NSCopying>
 
 //名称
 @property(nonatomic, strong) NSString *name;

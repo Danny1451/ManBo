@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
+                <outlet property="statusTableView" destination="aWS-ZE-kEH" id="geJ-Ra-Ja9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,16 +16,16 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBv-bh-uZs">
-                    <rect key="frame" x="277" y="54" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBv-bh-uZs">
+                    <rect key="frame" x="285" y="25" width="30" height="30"/>
                     <animations/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="获取"/>
                     <connections>
                         <action selector="refreshCode:" destination="-1" eventType="touchUpInside" id="rOz-H4-LcQ"/>
                     </connections>
                 </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-ZE-kEH">
-                    <rect key="frame" x="0.0" y="208" width="600" height="392"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-ZE-kEH">
+                    <rect key="frame" x="0.0" y="87" width="600" height="513"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
@@ -37,19 +38,10 @@
                 <constraint firstItem="aWS-ZE-kEH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NUf-LT-mkP"/>
                 <constraint firstItem="eBv-bh-uZs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dre-aF-Ocv"/>
                 <constraint firstAttribute="trailing" secondItem="aWS-ZE-kEH" secondAttribute="trailing" id="fGO-ZA-k1g"/>
+                <constraint firstItem="aWS-ZE-kEH" firstAttribute="top" secondItem="eBv-bh-uZs" secondAttribute="bottom" constant="25" id="stv-37-p72"/>
+                <constraint firstItem="eBv-bh-uZs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="viH-R0-psc"/>
                 <constraint firstAttribute="bottom" secondItem="aWS-ZE-kEH" secondAttribute="bottom" id="x0L-E2-qI2"/>
             </constraints>
         </view>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BE1-XE-cgc">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BE1-XE-cgc" id="bUR-ei-HPw">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <animations/>
-            </tableViewCellContentView>
-            <animations/>
-            <point key="canvasLocation" x="-234" y="170"/>
-        </tableViewCell>
     </objects>
 </document>

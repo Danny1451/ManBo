@@ -77,8 +77,8 @@
         
         if (resultCode == CODE_OK) {
             
-            NSMutableArray* statusesArray = [Status parseToStatusArray:resultObj];
-            callback(CODE_OK, statusesArray);
+            UserInfo *info = [UserInfo parseJsonData:resultObj];
+            callback(CODE_OK, info);
             
         }else{
             
@@ -131,8 +131,9 @@
         
         if (resultCode == CODE_OK) {
             
-            UserInfo *info = [UserInfo parseJsonData:resultObj];
-            callback(CODE_OK, info);
+            
+            NSMutableArray* statusesArray = [Status parseToStatusArray:resultObj];
+            callback(CODE_OK, statusesArray);
             
         }else{
             

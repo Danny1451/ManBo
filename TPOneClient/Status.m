@@ -11,6 +11,17 @@
 @implementation Status
 
 + (Status *) parseJsonData:(id)jsonDic{
+    
+    if ([jsonDic isEqual:[NSNull null]]){
+        
+        return nil;
+        
+    }
+    if ([jsonDic count] < 1) {
+        
+        return nil;
+    }
+    
     Status * res = [[Status alloc] init];
     
     res.user = [UserInfo parseJsonData:[jsonDic objectForKey:@"user"]];
@@ -65,5 +76,30 @@
     }
     
     return res;
+}
+
+- (id) copyWithZone:(NSZone *)zone{
+    Status *newModel = [[[self class] allocWithZone:zone] init];
+    
+    newModel.user = [self user];
+    
+    newModel.sId = [self sId];
+    newModel.text = [self text];
+    newModel.souce = [self souce];
+    newModel.timeCreated = [self timeCreated];
+    
+    newModel.releateStatus = [self releateStatus];
+    newModel.repostCount = [self repostCount];
+    newModel.commentsCount = [self commentsCount];
+    newModel.attitudeCount = [self commentsCount];
+    newModel.isLongText = [self isLongText];
+    
+    newModel.picurl =[self picurl];
+    newModel.thumnailPic = [self thumnailPic];
+    newModel.bminddlePic = [self bminddlePic];
+    newModel.originalPic = [self originalPic];
+    
+    return newModel;
+    
 }
 @end

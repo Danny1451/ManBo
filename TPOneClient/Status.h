@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "UserInfo.h"
 
-@interface Status : NSObject
+@interface Status : NSObject <NSCopying>
 
 //发布微博的用户
 @property(nonatomic, copy) UserInfo* user;

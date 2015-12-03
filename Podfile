@@ -10,6 +10,7 @@ target 'TPOneClient' do
 	pod 'WeiboSDK'
 	pod 'YTKNetwork'
 	pod 'ZBarSDK'
+	pod 'SDWebImage', '~> 3.7.3'
 end
 
 target 'TPOneClientTests' do
