@@ -19,8 +19,5 @@
 @property (strong, nonatomic) IBOutlet UILabel *fansLab;
 @property (strong, nonatomic) IBOutlet UILabel *statusLab;
 
-- (IBAction)btnLogin:(id)sender;
-
-
 - (void)startGetUserInfo;
 @end

@@ -109,8 +109,11 @@
         
         StorageUtils* uts = [StorageUtils shareInstance];
         
-        [uts setAccessToken:[(WBAuthorizeResponse *)response accessToken]];
-        [uts setUid:[(WBAuthorizeResponse *)response userID]];
+//        [uts setAccessToken:[(WBAuthorizeResponse *)response accessToken]];
+//        [uts setUid:[(WBAuthorizeResponse *)response userID]];
+        
+        [uts writeToken:[(WBAuthorizeResponse *)response accessToken]];
+        [uts writeUid:[(WBAuthorizeResponse *)response userID]];
         
         self.wbCurrentUserID = [(WBAuthorizeResponse *)response userID];
         self.wbRefreshToken = [(WBAuthorizeResponse *)response refreshToken];

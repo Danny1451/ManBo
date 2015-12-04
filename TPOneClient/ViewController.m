@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _tab1 = [[ZBarReaderViewController alloc] init];
+    _tab1 = [[UIViewController alloc] init];
     _view2 = [[HomeViewController alloc] init];
     _tab2 = [[UserInfoViewController alloc] init];
     [_tab1.tabBarItem setTitle:@"tab1"];

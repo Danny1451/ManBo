@@ -16,16 +16,8 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBv-bh-uZs">
-                    <rect key="frame" x="285" y="25" width="30" height="30"/>
-                    <animations/>
-                    <state key="normal" title="获取"/>
-                    <connections>
-                        <action selector="refreshCode:" destination="-1" eventType="touchUpInside" id="rOz-H4-LcQ"/>
-                    </connections>
-                </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-ZE-kEH">
-                    <rect key="frame" x="0.0" y="87" width="600" height="513"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-ZE-kEH">
+                    <rect key="frame" x="0.0" y="50" width="600" height="550"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
@@ -33,13 +25,10 @@
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="aWS-ZE-kEH" secondAttribute="bottom" constant="264" id="EBO-fS-jyc"/>
+                <constraint firstItem="aWS-ZE-kEH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="Iga-xW-IwH"/>
                 <constraint firstItem="aWS-ZE-kEH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Lyd-5F-aGH"/>
                 <constraint firstItem="aWS-ZE-kEH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NUf-LT-mkP"/>
-                <constraint firstItem="eBv-bh-uZs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dre-aF-Ocv"/>
                 <constraint firstAttribute="trailing" secondItem="aWS-ZE-kEH" secondAttribute="trailing" id="fGO-ZA-k1g"/>
-                <constraint firstItem="aWS-ZE-kEH" firstAttribute="top" secondItem="eBv-bh-uZs" secondAttribute="bottom" constant="25" id="stv-37-p72"/>
-                <constraint firstItem="eBv-bh-uZs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="viH-R0-psc"/>
                 <constraint firstAttribute="bottom" secondItem="aWS-ZE-kEH" secondAttribute="bottom" id="x0L-E2-qI2"/>
             </constraints>
         </view>

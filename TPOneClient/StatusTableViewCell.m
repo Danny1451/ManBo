@@ -20,6 +20,32 @@
     
     self.textLab.text = model.text;
     [self.textLab sizeToFit];
+    
+    
+    [self.repostLab setText:[NSString stringWithFormat:@"转发:%d", model.repostCount]];
+    [self.repostLab sizeToFit];
+    
+    [self.commentLab setText:[NSString stringWithFormat:@"评论:%d", model.commentsCount]];
+    [self.commentLab sizeToFit];
+    
+    
+    
+    [self.attitudeLab setText:[NSString stringWithFormat:@"点赞:%d", model.attitudeCount]];
+    [self.attitudeLab sizeToFit];
+    
+    
+    if (model.picurl.count > 0) {
+        
+    }
+    
+}
+
+- (CGFloat)getCellHeight{
+    
+    
+    CGFloat labHeight = self.textLab.frame.size.height;
+    return labHeight + 130;
+    
 }
 
 @end

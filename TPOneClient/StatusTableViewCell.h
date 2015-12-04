@@ -15,6 +15,13 @@
 @property (strong, nonatomic) IBOutlet UILabel *textLab;
 @property (strong, nonatomic) IBOutlet UIImageView *headImage;
 
+@property (strong, nonatomic) IBOutlet UILabel *repostLab;
+@property (strong, nonatomic) IBOutlet UILabel *commentLab;
+@property (strong, nonatomic) IBOutlet UILabel *attitudeLab;
+
+
 - (void)showDate:(Status *) model;
 
+
+- (CGFloat)getCellHeight;
 @end

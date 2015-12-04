@@ -11,6 +11,8 @@
 #import "StorageUtils.h"
 #import "StatusTableViewCell.h"
 
+#import <MJRefresh.h>
+
 @interface HomeViewController ()
 
 @end
@@ -23,22 +25,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-//    UIImage * image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://open.play.cn/api/v1/user/captcha/get?client_id=730988&r=3733303938382D32313834303339343830363038363034352D313735363638313238393234313538383137"]]];
-//    
-//    CGSize sizeI = image.size;
-//    
-//    UIImage* newImage = [self scaleImage:image ToSize:CGSizeMake(100, 35)];
-//    
-//    CGSize newSize = newImage.size;
-    //[self.imageView setImage:newImage];
-//    [self.imageView setImageUrlWithOutCache:@"https://open.play.cn/api/v1/user/captcha/get?client_id=730988&r=3733303938382D35333635313037363332393337343338312D38363532353439313239303230323337353433"];
-    
-//    [self.imageView setUserInteractionEnabled:YES];
-    
-//    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickCategory:)]];
+
     statuses = [[NSArray alloc] init];
     [self.statusTableView setDelegate:self];
     [self.statusTableView setDataSource:self];
+    
+    self.statusTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        TRACE(@"开始刷新");
+        [self refreshStatus];
+    }];
+    
+   // self.statusTableView.header = [MJRefreshNormalHeader H]
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,7 +66,9 @@
 }
 */
 
-- (IBAction)refreshCode:(id)sender {
+
+
+- (void)refreshStatus{
     
     //NSString* uid = [[StorageUtils shareInstance] uid];
     NSString* token = [[StorageUtils shareInstance] accessToken];
@@ -87,6 +88,9 @@
                                              
                                              statuses = resultObj;
                                              [self.statusTableView reloadData];
+                                             
+                                             [self.statusTableView.mj_header endRefreshing];
+                                             
                                              TRACE(@"列表内容为：%@",[statuses description]);
                                          }else{
                                              
@@ -102,15 +106,15 @@
 
 -(void)clickCategory:(UITapGestureRecognizer *)gestureRecognizer
 {
-    NSLog(@"click");
-//    NSLog(@"%hhd",[gestureRecognizer isMemberOfClass:[UITapGestureRecognizer class]]);
-    
-    UIView *viewClicked=[gestureRecognizer view];
-    if (viewClicked== self.imageView) {
-        NSLog(@"click image");
-        
-        [self refreshCode:nil];
-    }
+//    NSLog(@"click");
+////    NSLog(@"%hhd",[gestureRecognizer isMemberOfClass:[UITapGestureRecognizer class]]);
+//    
+//    UIView *viewClicked=[gestureRecognizer view];
+//    if (viewClicked== self.imageView) {
+//        NSLog(@"click image");
+//        
+//        [self refreshCode:nil];
+//    }
     
 }
 
@@ -119,7 +123,11 @@
 }
 
 - (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 140;
+    
+    StatusTableViewCell* cell = (StatusTableViewCell*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+    
+    
+    return [cell getCellHeight];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -133,6 +141,7 @@
     }
     
     [cell showDate:[statuses objectAtIndex:indexPath.row]];
+    
     
     return cell;
 }

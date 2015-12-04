@@ -15,6 +15,6 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *statusTableView;
 
-- (IBAction)refreshCode:(id)sender;
+- (void)refreshStatus;
 
 @end

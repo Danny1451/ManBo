@@ -22,6 +22,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     TRACE(@"view  load ");
+    
+   
+    StorageUtils* uts = [StorageUtils shareInstance];
+    
+    if (!strIsEmpty(uts.accessToken)) {
+        
+        
+        [self startGetUserInfo];
+        
+    }else{
+        
+        [self requestLogin];
+    }
+    
+    
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -49,8 +66,9 @@
  }
  */
 
-- (IBAction)btnLogin:(id)sender {
-    
+
+
+- (void)requestLogin{
     WBAuthorizeRequest *request = [WBAuthorizeRequest request];
     request.redirectURI = SINA_kRedirectURI;
     request.scope = @"all";
@@ -60,7 +78,6 @@
                          @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
     [WeiboSDK sendRequest:request];
 
-    
 }
 
 - (void)startGetUserInfo{
@@ -76,6 +93,7 @@
                                      }else{
                                          
                                          TRACE(@" get user info erro %d",resultCode);
+                                         [self requestLogin];
                                      }
         
     }];
@@ -92,9 +110,9 @@
     [_statusLab setHidden:NO];
     
     
-    NSString* friendStr = [NSString stringWithFormat:@"关注：%d", info.friends];
-    NSString* fansStr = [NSString stringWithFormat:@"粉丝： %d", info.followers];
-    NSString* statusStr= [NSString stringWithFormat:@"微博: %d", info.statuses];
+    NSString* friendStr = [NSString stringWithFormat:@"关注：%ld", info.friends];
+    NSString* fansStr = [NSString stringWithFormat:@"粉丝： %ld", info.followers];
+    NSString* statusStr= [NSString stringWithFormat:@"微博: %ld", info.statuses];
     
     [_friendLab setText:friendStr];
     [_fansLab setText:fansStr];

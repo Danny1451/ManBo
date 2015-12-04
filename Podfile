@@ -11,6 +11,8 @@ target 'TPOneClient' do
 	pod 'YTKNetwork'
 	pod 'ZBarSDK'
 	pod 'SDWebImage', '~> 3.7.3'
+	pod 'FMDB', '~> 2.5'
+	pod 'MJRefresh', '~> 3.0.7'
 end
 
 target 'TPOneClientTests' do

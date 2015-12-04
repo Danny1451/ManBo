@@ -15,4 +15,10 @@
 
 + (id) shareInstance;
 
+- (void) writeToken:(NSString*) token;
+- (NSString*) readToken;
+
+
+- (void) writeUid:(NSString*) token;
+- (NSString*) readUid;
 @end
