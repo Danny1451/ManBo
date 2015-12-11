@@ -13,6 +13,8 @@
 + (UserInfo*)parseJsonData:(id)jsonDic{
     UserInfo* result = [[UserInfo alloc] init];
     
+    result.uid = [[jsonDic objectForKey:@"id"] longLongValue];
+    
     result.name = [jsonDic objectForKey:@"name"];
     result.location = [jsonDic objectForKey:@"location"];
     result.descrip = [jsonDic objectForKey:@"description"];

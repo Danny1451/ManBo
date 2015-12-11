@@ -11,11 +11,14 @@
 
 @interface Status : NSObject <NSCopying>
 
+//保存原有的json串
+@property(nonatomic, copy) NSString* json;
+
 //发布微博的用户
 @property(nonatomic, copy) UserInfo* user;
 
 //微博ID
-@property(nonatomic) NSInteger sId;
+@property(nonatomic) long long sId;
 //微博的文本内容
 @property(nonatomic, strong) NSString* text;
 //微博的来源

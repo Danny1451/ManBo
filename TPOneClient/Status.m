@@ -7,7 +7,7 @@
 //
 
 #import "Status.h"
-
+#import "CommonUtils.h"
 @implementation Status
 
 + (Status *) parseJsonData:(id)jsonDic{
@@ -21,12 +21,14 @@
         
         return nil;
     }
-    
+
     Status * res = [[Status alloc] init];
+    
+    res.json = [CommonUtils dataToString:jsonDic];
     
     res.user = [UserInfo parseJsonData:[jsonDic objectForKey:@"user"]];
     
-    res.sId = [[jsonDic objectForKey:@"id"] integerValue];
+    res.sId = [[jsonDic objectForKey:@"id"] longLongValue];
     
     res.text = [jsonDic objectForKey:@"text"];
     
@@ -62,7 +64,6 @@
     
     return res;
 }
-
 
 + (NSMutableArray*) parseToStatusArray:(id)jsonDic{
     

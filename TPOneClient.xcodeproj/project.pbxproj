@@ -39,8 +39,10 @@
 		C13C91F51C0F1E5200602E90 /* StatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C13C91F41C0F1E5200602E90 /* StatusTableViewCell.m */; };
 		C14F8A761C102A3400C58E03 /* StatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C14F8A751C102A3400C58E03 /* StatusTableViewCell.xib */; };
 		C17F8C6A1BF1A2D600ECB62B /* EGUAsynImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C17F8C691BF1A2D600ECB62B /* EGUAsynImageView.m */; };
+		C19564C11C18081700A38993 /* DBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C19564C01C18081700A38993 /* DBUtils.m */; };
 		C1A931741C0FECA500C907EC /* ico_avatar_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A931721C0FECA500C907EC /* ico_avatar_normal@2x.png */; };
 		C1A931751C0FECA500C907EC /* ico_avatar_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A931731C0FECA500C907EC /* ico_avatar_normal@3x.png */; };
+		C1B588EF1C191ED700CA95E3 /* CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B588EE1C191ED700CA95E3 /* CommonUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,8 +113,12 @@
 		C14F8A751C102A3400C58E03 /* StatusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusTableViewCell.xib; sourceTree = "<group>"; };
 		C17F8C681BF1A2D600ECB62B /* EGUAsynImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGUAsynImageView.h; sourceTree = "<group>"; };
 		C17F8C691BF1A2D600ECB62B /* EGUAsynImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGUAsynImageView.m; sourceTree = "<group>"; };
+		C19564BF1C18081700A38993 /* DBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUtils.h; sourceTree = "<group>"; };
+		C19564C01C18081700A38993 /* DBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUtils.m; sourceTree = "<group>"; };
 		C1A931721C0FECA500C907EC /* ico_avatar_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_avatar_normal@2x.png"; sourceTree = "<group>"; };
 		C1A931731C0FECA500C907EC /* ico_avatar_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_avatar_normal@3x.png"; sourceTree = "<group>"; };
+		C1B588ED1C191ED700CA95E3 /* CommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtils.h; sourceTree = "<group>"; };
+		C1B588EE1C191ED700CA95E3 /* CommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtils.m; sourceTree = "<group>"; };
 		C71B262E7853CEB11DA4ABA6 /* Pods-TPOneClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPOneClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-TPOneClient/Pods-TPOneClient.release.xcconfig"; sourceTree = "<group>"; };
 		F86D1F8E58CCABD08DEDD83A /* Pods-TPOneClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPOneClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TPOneClient/Pods-TPOneClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -267,6 +273,10 @@
 			children = (
 				C17F8C681BF1A2D600ECB62B /* EGUAsynImageView.h */,
 				C17F8C691BF1A2D600ECB62B /* EGUAsynImageView.m */,
+				C1B588ED1C191ED700CA95E3 /* CommonUtils.h */,
+				C1B588EE1C191ED700CA95E3 /* CommonUtils.m */,
+				C19564BF1C18081700A38993 /* DBUtils.h */,
+				C19564C01C18081700A38993 /* DBUtils.m */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -500,6 +510,7 @@
 				C1266FF21BEC94DC003ED461 /* ViewController.m in Sources */,
 				C13C91F51C0F1E5200602E90 /* StatusTableViewCell.m in Sources */,
 				C1330D421C047D1000534061 /* UserInfo.m in Sources */,
+				C19564C11C18081700A38993 /* DBUtils.m in Sources */,
 				C1266FEF1BEC94DC003ED461 /* AppDelegate.m in Sources */,
 				C109F6311C085CEE00601D1C /* Status.m in Sources */,
 				C17F8C6A1BF1A2D600ECB62B /* EGUAsynImageView.m in Sources */,
@@ -507,6 +518,7 @@
 				C127E0371BF048D3001AE017 /* HomeViewController.m in Sources */,
 				C13123241BF32A4100579644 /* UserInfoViewController.m in Sources */,
 				C1330D3C1C044D1B00534061 /* HttpUtils.m in Sources */,
+				C1B588EF1C191ED700CA95E3 /* CommonUtils.m in Sources */,
 				C1330D3F1C045D4D00534061 /* StorageUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,7 @@
 #import "StorageUtils.h"
 
 #import "ViewController.h"
+#import "DBUtils.h"
 
 @interface WBBaseRequest ()
 - (void)debugPrint;
@@ -30,8 +31,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [DBUtils shareInstance];
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:SINA_APP_KEY];
+    
     
     return YES;
 }

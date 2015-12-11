@@ -10,6 +10,8 @@
 
 @interface UserInfo : NSObject<NSCopying>
 
+//用户id
+@property(nonatomic) long long uid;
 //名称
 @property(nonatomic, strong) NSString *name;
 //地理位置

@@ -10,6 +10,7 @@
 #import "HttpUtils.h"
 #import "StorageUtils.h"
 #import "StatusTableViewCell.h"
+#import "DBUtils.h"
 
 #import <MJRefresh.h>
 
@@ -26,9 +27,15 @@
     // Do any additional setup after loading the view from its nib.
     
 
-    statuses = [[NSArray alloc] init];
+    statuses =  [[DBUtils shareInstance] getStatus];
+    
     [self.statusTableView setDelegate:self];
     [self.statusTableView setDataSource:self];
+    [self.statusTableView reloadData];
+    
+    
+    
+    
     
     self.statusTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         TRACE(@"开始刷新");
@@ -90,6 +97,10 @@
                                              [self.statusTableView reloadData];
                                              
                                              [self.statusTableView.mj_header endRefreshing];
+                                             
+                                             
+                                             [[DBUtils shareInstance] insertStatusArray:resultObj];
+                                             
                                              
                                              TRACE(@"列表内容为：%@",[statuses description]);
                                          }else{

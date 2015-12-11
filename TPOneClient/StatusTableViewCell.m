@@ -7,6 +7,7 @@
 //
 
 #import "StatusTableViewCell.h"
+#import "CommonUtils.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation StatusTableViewCell
@@ -14,7 +15,7 @@
 - (void)showDate:(Status *)model{
     
     self.userNameLab.text = model.user.name;
-    self.timeCreatedLab.text = model.timeCreated;
+    self.timeCreatedLab.text = [CommonUtils sinaDateToTargetDate:model.timeCreated target:@"yyyy-MM-dd HH:mm:ss"];
     
     [self.headImage sd_setImageWithURL:[NSURL URLWithString:model.user.profileUrl] placeholderImage:[UIImage imageNamed:@"ico_avatar_normal.png"]];
     
