@@ -55,6 +55,7 @@
         [urlArray addObject:thumbnail];
     }
     
+    res.picurl = urlArray;
     
     
     

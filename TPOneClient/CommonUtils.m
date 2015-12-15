@@ -59,5 +59,23 @@
     
 }
 
++ (NSString*)picUrl:(NSString*) source Format:(PicFormat) type{
 
+    NSString* replace;
+    switch (type) {
+        case PicBmiddle:
+            replace = @"bmiddle";
+            break;
+        case PicOriginal:
+            replace = @"large";
+            break;
+        case PicThumbnail:
+            return source;
+            break;
+        default:
+            break;
+    }
+    
+    return [source stringByReplacingOccurrencesOfString:@"thumbnail" withString:replace];
+}
 @end

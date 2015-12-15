@@ -8,6 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    
+    //小图
+    PicThumbnail=0,
+    
+    //中等
+    PicBmiddle,
+    
+    //原图
+    PicOriginal,
+    
+    
+}PicFormat;
 @interface CommonUtils : NSObject
 
 + (NSString *) dataToString:(id) object;
@@ -15,4 +28,7 @@
 
 
 + (NSString*) sinaDateToTargetDate:(NSString *) sinaStr target:(NSString*) target;
+
+
++ (NSString*) picUrl:(NSString*) source Format:(PicFormat) type;
 @end

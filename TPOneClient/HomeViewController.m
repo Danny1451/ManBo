@@ -149,6 +149,8 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"StatusTableViewCell" owner:nil options:nil] lastObject];
        // cell = [[StatusTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+        
+        cell.parentView = self;
     }
     
     [cell showDate:[statuses objectAtIndex:indexPath.row]];
